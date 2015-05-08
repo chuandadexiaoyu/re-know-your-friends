@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Small:</strong>
+  <%= @friend_relation.small_id %>
+</p>
+
+<p>
+  <strong>Big:</strong>
+  <%= @friend_relation.big_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @friend_relation.status %>
+</p>
+
+<%= link_to 'Edit', edit_friend_relation_path(@friend_relation) %> |
+<%= link_to 'Back', friend_relations_path %>

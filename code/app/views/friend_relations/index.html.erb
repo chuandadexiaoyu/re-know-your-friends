@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Friend Relations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Small</th>
+      <th>Big</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @friend_relations.each do |friend_relation| %>
+      <tr>
+        <td><%= friend_relation.small_id %></td>
+        <td><%= friend_relation.big_id %></td>
+        <td><%= friend_relation.status %></td>
+        <td><%= link_to 'Show', friend_relation %></td>
+        <td><%= link_to 'Edit', edit_friend_relation_path(friend_relation) %></td>
+        <td><%= link_to 'Destroy', friend_relation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Friend relation', new_friend_relation_path %>

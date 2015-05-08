@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  pool: 5                    # 淘800数据库连接池的连接数量
+  password: root
+  host: localhost
+  port: 3306
+  username: root
+
+development:
+  <<: *default
+  database: chongshi_develop
+
+test:
+  <<: *default
+  database: chongshi_test
+
+production:
+  <<: *default
+  database: chongshi_product
