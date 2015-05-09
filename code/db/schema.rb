@@ -21,10 +21,8 @@ ActiveRecord::Schema.define(version: 20150506235721) do
   end
 
   create_table "friend_relations", force: :cascade do |t|
-    t.integer  "first_id",    limit: 4
-    t.integer  "second_id",   limit: 4
-    t.string   "first_type",  limit: 255
-    t.string   "second_type", limit: 255
+    t.integer  "user_id",     limit: 4
+    t.integer  "follower_id", limit: 4
     t.string   "status",      limit: 255
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false

@@ -1,17 +1,17 @@
 class FriendRelation < ActiveRecord::Base
-  attr_accessible :first_id, :second_id, :first_type, :second_type, :status
-  validates :first_id,       presence: true
-  validates :second_id,      presence: true
+  attr_accessible :user_id, :follower_id, :status
+  validates :user_id,        presence: true
+  validates :follower_id,    presence: true
   validates :status,         presence: true
 
-  belongs_to :first,     :class_name => 'User'
-  belongs_to :second,    :class_name => 'User'
+  belongs_to :user
+  belongs_to :follower, :class_name => 'User'
 
   rails_admin do
-    configure :first do
+    configure :user do
     end
 
-    configure :second do
+    configure :follower do
     end
   end
 end

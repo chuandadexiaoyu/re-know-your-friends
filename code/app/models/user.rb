@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   validates :user_birthday, presence: true
   has_one   :address
   has_many  :friend_relations
+  has_many  :followers, through: :friend_relations
 
   mount_uploader :user_avatar, AvatarUploader
 
