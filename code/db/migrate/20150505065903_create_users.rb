@@ -2,7 +2,6 @@ class CreateUsers < ActiveRecord::Migration
   def change
     create_table :users do |t|
       t.string   :user_name,    :limit   => 20,  :comment => '用户名字'
-      t.string   :user_email,   :limit   => 100, :comment => '用户email'
       t.string   :user_gender,  :limit   => 2,   :comment => '用户性别' 
       t.date     :user_birthday,                 :comment => '用户生日'
       t.string   :user_avatar,   :limit   => 45,  :comment => '用户照片'
