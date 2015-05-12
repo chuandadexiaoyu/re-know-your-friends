@@ -1,26 +1,85 @@
-<h2>Log in</h2>
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en">
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+<head>
+<meta charset="UTF-8">
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+<title>给你的老朋友写封信吧</title>
+<meta name="DC.title" content="给你的老朋友写封信吧">
+<meta property="og:title" content="给你的老朋友写封信吧">
+<meta property="og:image" content="https://froont.com/jsohpill/c5ljo5/_screenshots/images/thumbnail/1700_1430808317.png_1500x1500.jpeg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FROONT">
+<meta name="DC.language" scheme="ISO639-1" content="en">
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+<%= stylesheet_link_tag    'base', media: 'all', 'data-turbolinks-track' => true %>
+<%= stylesheet_link_tag    'style', media: 'all', 'data-turbolinks-track' => true %>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+<%= javascript_include_tag 'jquery.min.js', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'noframework.waypoints.min.js', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'responsive-nav.min.js', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'idangerous.swiper.min.js', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'form-submit', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'reveal-animation', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'background-parallax', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'page-script', 'data-turbolinks-track' => true %>
+
+<script type="text/javascript">
+var fonts = {
+  "europa": {
+    "css_name": "europa",
+    "family": "Europa",
+    "id": "myvg",
+    "source": "typekit",
+    "stack": "sans-serif",
+    "variants": [
+      "n3",
+    "i3",
+    "n4",
+    "i4",
+    "n7",
+    "i7"
+      ]
+  }
+};
+</script>
+
+<%= javascript_include_tag 'webfont', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'fontloader', 'data-turbolinks-track' => true %>
+<!-- Replace code below with your typekit kit's embed code -->
+<script type="text/javascript" src='//use.typekit.net/ik/7Dcvsj0o94i4P4vIw0Wm9Q3FuMm6KDUFbr0etqg4ZcXfen9gf5aoHsJAFR6awDbUWhTDdhy3-AUCOAwudeTzFsT2Z14zdhoXOcFzdPUXZWFXOcZkdhN0ifoRdhXCdeNRjA3lZemhOcZkdhN0ifoRdhXCwQJaORM0wftUOeUzjhBC-eNDifJeZWmkdagyH6qJ7WqbMg62JMJ7f6RRy6IbMg6FJMJ7fbK7psMMeMb6MKGHf5PeMsMMeMt6MKG4fHyoIMMjgkMfH6GJojjgIMMjIPMfqMezaGp7gb.js'></script>
+<script type="text/javascript">
+try {
+  Typekit.load();
+} catch (e) {}
+</script>
+<!-- End of typekit code -->
+<meta http-equiv="content-language" content="en">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <%= form_for resource, html: { id: "styled_form_1", class: "fr-widget fr-form fr-wf fr_styled_form_1" }, as: resource_name, url: session_path(resource_name) do |f| %>
+    <div id="styled_form_grid" class="fr-widget fr-grid fr_styled_form_grid">
+      <div id="styled_name_input" class="fr-widget fr-input fr-wf fr_form_input_1 fr_styled_name_input">
+        <%= f.email_field :email, autofocus: true, class: "fr_form_input_1 fr_styled_name_input", placeholder: "email" %>
+      </div>
+      
+      <div id="styled_email_input" class="fr-widget fr-input fr-wf fr_form_input_1 fr_styled_email_input">
+        <%= f.password_field :password, autofocus: true, class: "fr_form_input_1 fr_styled_name_input", placeholder: "password", autocomplete: "off" %>
+      </div>
+      <a id="styled_submit_btn" class="fr-widget fr-text fr-wf fr_submit_button_1 fr_styled_submit_btn fr-widget-hover-opacity-60 fr-link fr-linktype-submit">
+        <div class="fr-text">
+          Login In
+        </div>
+      </a>
     </div>
-  <% end -%>
+  <% end %>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+</div>
+</body>
 
-<%= render "devise/shared/links" %>
+</html>
